@@ -24,3 +24,4 @@ function exempleconst(){
     console.log(z);
 }
 exempleconst(); // TypeError: Assignment to constant variable.
+console.log("Une erreur s'est produite car on ne peut pas réassigner une valeur à une constante déclarée avec const."); 
