@@ -13,7 +13,94 @@
         console.info("les serveur est demarré avec succées.");
         console.error("une erreur est survenue.");
         console.warn("attention, cette action peut avoir des conséquences imprévues.");
-        alert("ceci est une alerte !");
-    </script>
+        //alert("ceci est une alerte !");
+        var name = "wissam";
+        var age = 22;
+        const pi=3.14;
+
+        console.log("mon nom est : " +name);
+        console.log(name.length);
+        console.log("je m'appelle" , name , "et j'ai",age, "ans.");
+        console.log("je m'appelle " +name+ " et j'ai "+age+"ans.");
+        console.log(`je m'appelle ${name}  et j'ai ${age}ans.`);
+        console.log(pi);
+        //les condition
+        const time = new Date().getHours();
+        var greeting;
+        if (time <10){
+            greeting="good morning";
+        }else if (time<20) {
+            greeting="good day";
+        }else{
+            greeting = "good evening";
+        }
+        console.log(greeting);
+        var note1 = 12;
+        var note2 = 8.5;
+        var moyenne = (note1 + note2) / 2
+        if (moyenne>10) {
+            console.log("Bravo");
+        } else {if (moyenne==10) {
+            console.log("Passable");
+        }else{
+            console.log("vous êtes ajourné");    
+        }   
+        }
+        //comparaison totale (=== type et val) et partielle ==
+        var nombre = "5";
+        if (nombre ==5) {
+            console.log("comparaison partielle : le nombre est égal aprés conversion de type à 5");
+        } else {
+            console.log("comparaison partielle , la valeur est différente ");
+        }
+        if(nombre ===5){
+            console.log("comparaison totale : la valeur et le type sont égaux à 5");
+        } else {
+            console.log("comparaison totale , la valeur ou le type est différent ");
+        }
+        //condition ternaire    
+        var nombre = "5";   
+         (nombre ==5) ? console.log("comparaison partielle : le nombre est égal aprés conversion de type à 5") : console.log("comparaison partielle , la valeur est différente ");
+        (nombre ===5) ? console.log("comparaison totale : la valeur et le type sont égaux à 5") : console.log("comparaison totale , la valeur ou le type est différent ");
+        //switch case
+        var coleur = "rouge"
+        switch (coleur) {
+            case "rouge":
+                console.log("la coleur est rouge");
+                
+                break;
+            case "bleu":
+                console.log("la coleur est bleu");
+                break;
+            case "vert":    
+                console.log("la coleur est vert");
+                break;
+            default:
+                console.log("la coleur est inconnue");
+                break;
+        }
+        
+        //les fonctions
+        function saluer(nom) {
+            console.log(`Bonjour ${nom} !`);
+        }
+        saluer("wissam");
+        function additionner(a, b) {
+            return a + b;
+        }
+        var resultat = additionner(5, 10);
+        console.log(`le resultat de l'addition est : ${resultat}`);
+        
+        function test(a)
+        {
+            if (a%2==0) {
+                return "pair";
+            } else {
+                return "impair";
+            }
+        }
+        console.log(`le nombre 7 est : ${test(7)}`);
+        console.log(`le nombre 8 est : ${test(8)}`);
+        </script>
 </body>
 </html>
