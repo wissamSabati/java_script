@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonctions flechées</title>
+</head>
+<body>
+
+    <script>
+        function addition(a , b) {
+            return a + b;
+        }
+        console.log("la valeur de 2 + 3 est :"+ addition(2,3));
+
+        const addition_flechée = (a , b) => a+b;
+        console.log("la valeur de 5 + 7 est :"+ addition_flechée(5,7));
+        
+        function hello(name) {
+            return name;
+        }
+        console.log(hello("hello world"));
+        
+        const hello_flechée = (name) => name;
+        console.log(hello_flechée("hello world flechée"));
+
+        function est_paire (a) {
+            if (a % 2 == 0) {
+                console.log("le nombre "+ a +" est paire");
+            }else {
+                console.log("le nombre "+ a +" est impaire");
+            }
+        }
+        est_paire(8);
+
+        const est_paire_flechée = (a) => {
+            if (a % 2 == 0) {
+                console.log("le nombre "+ a +" est paire");
+            }else {
+                console.log("le nombre "+ a +" est impaire");
+            }
+        }
+        est_paire_flechée(7);
+
+        est_paire_flechée_ternaire = (a) => (a % 2 == 0) ? console.log("le nombre "+ a +" est paire") : console.log("le nombre "+ a +" est impaire");
+        est_paire_flechée_ternaire("avec les conditions ternaires " +10);
+</script>
+</body>
+</html>
