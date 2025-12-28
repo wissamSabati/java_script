@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonctions d'iterations</title>
+</head>
+<body>
+    <h2>les fonctions d'iterations</h2>
+    <p id="demo"></p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        function doubleAndLog(num){
+            console.log(num*2 , "resultat de la fonction doubleAndLog");
+            
+        }
+        numbers.forEach(doubleAndLog);
+        console.log (numbers);
+
+        const num =[1,2,3,4,5];
+        function double (num){
+            return num * 2;
+        }
+        const doubleNumbers = num.map(double);
+        console.log ("les tableau num" ,doubleNumbers);
+
+        const number1 = [1 ,2,3,4,5,6];
+        const filterNumbers1 = number1.filter((num)=>num%2===0); // elle retourne meme le tableau
+        console.log ("les nombres pairs" , filterNumbers1);
+
+
+        const number2 = [2, 4, 6, 8, 10];
+        const evryNumber2 = number2.every((num)=> num %2 ===0);
+        console.log ("tous les nombres sont pairs ?" , evryNumber2); //si tout les elements satisfont la condition elle renvoie true true
+
+        const fruits = ["pomme", "banane", "orange", "fraise"];
+        const indexOfOrange = fruits.indexOf("orange");
+        console.log ("l'index de l'orange est :" , indexOfOrange);
+
+        const result = fruits.find((f) => f.length>5);
+        console.log ("le resultat est :" , result); // elle retourne le premier element de tableau qui satisfait la condition
+
+
+        const numbers3 = [10, 20, 30, 40, 50];
+        const index = numbers3.findIndex((num) => num > 25);
+        console.log ("l'index du premier nombre superieur a 25 est :" , index);
+
+
+    </script>
+    
+</body>
+</html>
